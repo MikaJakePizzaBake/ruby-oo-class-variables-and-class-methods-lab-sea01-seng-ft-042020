@@ -22,6 +22,7 @@ class Song
     @@genres.uniq
   end
   def genre_count
-    
+    @@genre = {}
+    @@genre[genre] ||= count
   end
 end
