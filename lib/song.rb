@@ -22,7 +22,12 @@ class Song
     @@genres.uniq
   end
   def self.genre_count
-    @@genres = {}
-    @@genres[genre] ||= count
+    genre_count = {}
+  @@genres.select do |genre|
+    if genre_count[genre]
+      genre_count[genre] += 1
+    else
+      genre_count[genre] = 1
+    end
   end
 end
