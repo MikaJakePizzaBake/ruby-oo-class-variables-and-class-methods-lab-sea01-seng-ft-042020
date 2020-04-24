@@ -41,5 +41,6 @@ def self.artist_count
       artist_count[artist]
     end
   end
+  artist_count
 end
 end
